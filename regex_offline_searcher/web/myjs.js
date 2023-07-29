@@ -59,7 +59,7 @@ function get_as_html(text, groups, offset, number) {
         [number, new_html_small] = get_as_html(new_text, new_groups, groups[i][1][0], number + 1);
         new_html += new_html_small;
         new_html += '</span>';
-        if (j < groups.length - 1) {
+        if (i < groups.length - 1) {
             new_html += text.slice(groups[i][1][1] - offset, groups[i + 1][1][0] - offset);
         } else {
             new_html += text.slice(groups[i][1][1] - offset, text.length);
