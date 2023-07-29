@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>REGEX tester on the fly</title>
+    <script type="text/javascript" src="/eel.js"></script>
+    <link rel="stylesheet" href="bootstrap-5.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="mycss.css">
+</head>
+<body class="bg-dark">
+
+<div class="container-fluid">
+    <div class="row m-3">
+        <div class="col-12">
+            <h1 class="text-center text-white">REGEX tester on the fly</h1>
+        </div>
+    </div>
+    <div class="row m-3 text-light border-light border-1 border rounded">
+        <div class="form-check">
+            <input class="my_checks form-check-input" type="checkbox" value="2" id="IGNORECASE">
+            <label class="form-check-label" for="IGNORECASE">
+                re.IGNORECASE
+            </label>
+</div>
+        <div class="form-check">
+            <input class="my_checks form-check-input" type="checkbox" value="4" id="LOCALE">
+            <label class="form-check-label" for="LOCALE">
+                re.LOCALE
+            </label>
+</div>
+        <div class="form-check">
+            <input class="my_checks form-check-input" type="checkbox" value="8" id="MULTILINE">
+            <label class="form-check-label" for="MULTILINE">
+                re.MULTILINE
+            </label>
+</div>
+        <div class="form-check">
+
+            <input class="my_checks form-check-input" type="checkbox" value="16" id="DOTALL">
+            <label class="form-check-label" for="DOTALL">
+                re.DOTALL
+            </label>
+</div>
+        <div class="form-check">
+            <input class="my_checks form-check-input" type="checkbox" value="64" id="VERBOSE">
+            <label class="form-check-label" for="VERBOSE">
+                re.VERBOSE
+            </label>
+        </div>
+    </div>
+    <div class="row m-3">
+        <input id="regex_input" type="text" class="form-control bg-dark text-light" id="regex"
+               placeholder="Enter regex">
+    </div>
+    <div class="row m-3 text-light">
+        <div id="text_input" class="rounded border border-1 border-light" style="min-height: 300px;"
+             contenteditable="true">
+        </div>
+    </div>
+    <div class="row m-3 text-light">
+        <div id="results" class="rounded border border-1 border-light" style="min-height: 100px">
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="bootstrap-5.0.2/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="myjs.js"></script>
+</body>
+</html>
