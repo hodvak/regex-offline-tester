@@ -10,6 +10,7 @@ def check_findall(regex, text, flags=0):
     text = text.replace('\xa0', ' ')
     if not regex:
         eel.send_data([])
+        return
     good_data = []
     try:
         for data in re.finditer(regex, text, flags):
